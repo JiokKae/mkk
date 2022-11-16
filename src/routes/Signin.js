@@ -1,9 +1,9 @@
-import { useMutation } from "@apollo/client";
+import { useMutation, useQuery } from "@apollo/client";
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import FloatingInput from "../components/FloatingInput";
-import { QUERIES_AFFECTED_BY_SIGN, SINGIN } from "../constants/querys";
+import { ME, QUERIES_AFFECTED_BY_SIGN, SINGIN } from "../constants/querys";
 import { MKK } from "../constants/urls";
 
 const SigninButton = styled.input`
@@ -47,6 +47,11 @@ function Signin() {
 		e.preventDefault();
 		signin({ variables: { input: { id, password } } });
 	};
+	useQuery(ME, {
+		onCompleted: (data) => {
+			if (data.me) navigate("/");
+		},
+	});
 	return (
 		<>
 			<Link to="/">

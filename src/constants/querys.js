@@ -9,6 +9,18 @@ export const ME = gql`
 	}
 `;
 
+export const SINGIN = gql`
+	mutation Signin($input: SigninInput!) {
+		signin(input: $input) {
+			me {
+				name
+				id
+			}
+			message
+		}
+	}
+`;
+
 export const SIGNOUT = gql`
 	mutation Signout {
 		signout

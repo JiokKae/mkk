@@ -1,0 +1,21 @@
+.bgc-mkk {
+	background: #81c97e !important;
+	color: white !important;
+}
+.color-mkk {
+	color: #81c97e;
+}
+.btn-mkk {
+	background-color: #99c882;
+	color: white;
+}
+.mkk-form {
+	border-radius: 0rem !important;
+	border-color: #d6d6d6 !important;
+}
+.form-sign {
+	width: 100%;
+	max-width: 420px;
+	padding: 15px;
+	margin: auto;
+}

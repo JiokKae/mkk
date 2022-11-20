@@ -47,4 +47,12 @@ export const REGISTER_PROFILE = gql`
 	}
 `;
 
+export const UNREGISTER_PROFILE = gql`
+	mutation UnregisterProfile($input: UnregisterProfileInput!) {
+		unregisterProfile(input: $input) {
+			success
+		}
+	}
+`;
+
 export const QUERIES_AFFECTED_BY_SIGN = [{ query: ME }];

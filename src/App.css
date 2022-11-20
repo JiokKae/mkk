@@ -7,6 +7,7 @@
 }
 .btn-mkk {
 	background-color: #99c882;
+	--bs-btn-hover-bg: #99c882;
 	color: white;
 }
 .mkk-form {

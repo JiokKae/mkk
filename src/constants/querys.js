@@ -27,4 +27,24 @@ export const SIGNOUT = gql`
 	}
 `;
 
+export const REGISTER_PROFILE = gql`
+	mutation RegisterProfile($input: RegisterProfileInput!) {
+		registerProfile(input: $input) {
+			profile {
+				character {
+					name
+					level
+					itemLevel
+					class
+					server
+					guild {
+						name
+					}
+				}
+				allow
+			}
+		}
+	}
+`;
+
 export const QUERIES_AFFECTED_BY_SIGN = [{ query: ME }];

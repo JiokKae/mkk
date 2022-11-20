@@ -5,6 +5,19 @@ export const ME = gql`
 		me {
 			name
 			id
+			profiles {
+				character {
+					name
+					level
+					itemLevel
+					class
+					server
+					guild {
+						name
+					}
+				}
+				allow
+			}
 		}
 	}
 `;

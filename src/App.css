@@ -20,3 +20,10 @@
 	padding: 15px;
 	margin: auto;
 }
+
+.singleLine {
+	max-width: 100%;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}

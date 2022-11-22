@@ -15,7 +15,7 @@ export default function NavbarLayout() {
 		<>
 			<GlobalStyle />
 			<Navbar />
-			<div className="container">
+			<div className="container-lg">
 				<Outlet />
 			</div>
 		</>

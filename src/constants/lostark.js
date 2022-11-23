@@ -1,4 +1,5 @@
 export const CLASS_LOCALE = {
+	warrior: { kr: "전사" },
 	destroyer: { kr: "디스트로이어" },
 	berserker: { kr: "버서커" },
 	warlord: { kr: "워로드" },
@@ -12,6 +13,7 @@ export const CLASS_LOCALE = {
 	infighter: { kr: "인파이터" },
 	lancemaster: { kr: "창술사" },
 	gunslinger: { kr: "건슬링어" },
+	devil_hunter_female: { kr: "건슬링어" },
 	devilhunter: { kr: "데빌헌터" },
 	devil_hunter: { kr: "데빌헌터" },
 	blaster: { kr: "블래스터" },

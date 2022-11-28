@@ -1,6 +1,7 @@
 import { useQuery } from "@apollo/client";
 import styled from "styled-components";
 import MyCharacters from "../components/MyCharacters";
+import Votings from "../components/Vote/Votings";
 import { ME } from "../constants/querys";
 
 const Container = styled.div`
@@ -14,6 +15,7 @@ export default function Home() {
 	return (
 		<Container>
 			{loading ? null : data.me ? <MyCharacters /> : null}
+			<Votings />
 		</Container>
 	);
 }

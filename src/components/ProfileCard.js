@@ -71,12 +71,12 @@ function ItemLevel({ itemLevel }) {
 	);
 }
 
-export default function ProfileCard({ character, allow }) {
+export default function ProfileCard({ character, allow = true, closeButton }) {
 	return (
 		<div className="col-6 col-md-4">
 			<Card>
-				{allow || <NotRegistered>등록 대기</NotRegistered>}
-				<Row className="gx-2 mb-2 flex-nowrap align-items-end">
+				{allow ? null : <NotRegistered>등록 대기</NotRegistered>}
+				<Row className="gx-2 mb-2 flex-nowrap align-items-center">
 					<Col xs="auto">
 						<img
 							src={`${MKK}/img/guild.png`}
@@ -95,11 +95,7 @@ export default function ProfileCard({ character, allow }) {
 							{character.guild?.name || "???"}
 						</div>
 					</Col>
-					<Col xs="auto">
-						<UnregisterCharacterModal
-							characterName={character.name}
-						/>
-					</Col>
+					<Col xs="auto">{closeButton}</Col>
 				</Row>
 				<div className="row gx-1 mb-2">
 					<div className="col-auto">

@@ -68,4 +68,72 @@ export const UNREGISTER_PROFILE = gql`
 	}
 `;
 
+export const VOTINGS = gql`
+	query Votings($ended: Boolean, $count: Int, $startDateTime: String) {
+		votings(ended: $ended, count: $count, startDateTime: $startDateTime) {
+			id
+			title
+			deadline
+			items {
+				id
+				name
+				limit
+				characters {
+					name
+					level
+					itemLevel
+					class
+					server
+					guild {
+						name
+					}
+				}
+			}
+		}
+	}
+`;
+
+export const VOTE = gql`
+	mutation Mutation($input: VoteInput!) {
+		vote(input: $input) {
+			success
+		}
+	}
+`;
+
+export const UNVOTE = gql`
+	mutation Unvote($input: UnvoteInput!) {
+		unvote(input: $input) {
+			success
+		}
+	}
+`;
+
+export const CREATE_VOTING = gql`
+	mutation CreateVoting($input: CreateVotingInput!) {
+		createVoting(input: $input) {
+			voting {
+				id
+				title
+				deadline
+				items {
+					id
+					name
+					limit
+					characters {
+						name
+						level
+						itemLevel
+						class
+						server
+						guild {
+							name
+						}
+					}
+				}
+			}
+		}
+	}
+`;
+
 export const QUERIES_AFFECTED_BY_SIGN = [{ query: ME }];

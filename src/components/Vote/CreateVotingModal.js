@@ -92,9 +92,6 @@ export default function CreateVotingModal({ className }) {
 	}, []);
 
 	const [createVoting] = useMutation(CREATE_VOTING, {
-		onCompleted: (data) => {
-			console.log(data);
-		},
 		refetchQueries: [{ query: VOTINGS }],
 	});
 

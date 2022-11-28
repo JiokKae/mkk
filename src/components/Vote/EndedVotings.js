@@ -10,7 +10,6 @@ export default function EndedVotings() {
 	useQuery(VOTINGS, {
 		variables: { ended: true, count: 10 },
 		onCompleted: ({ votings }) => {
-			console.log(votings);
 			setEndedVotings(votings);
 		},
 	});

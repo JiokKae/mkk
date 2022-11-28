@@ -24,7 +24,10 @@ const Nav = styled.nav`
 `;
 
 function Navbar() {
-	const { data, loading } = useQuery(ME);
+	const {
+		data: { me = null },
+		loading,
+	} = useQuery(ME);
 	const [signout] = useMutation(SIGNOUT, {
 		refetchQueries: QUERIES_AFFECTED_BY_SIGN,
 	});
@@ -78,7 +81,7 @@ function Navbar() {
 					</ul>
 					<LoawaSearchForm />
 					<ul className="navbar-nav">
-						{loading ? null : data.me ? (
+						{loading ? null : me ? (
 							<li className="nav-item dropdown">
 								<a
 									className="nav-link"
@@ -94,7 +97,7 @@ function Navbar() {
 											verticalAlign: "middle",
 											marginRight: ".4375rem",
 										}}>
-										{data.me.name}
+										{me.name}
 									</span>
 									<img
 										src={`${MKK}/img/^.png`}
@@ -113,12 +116,17 @@ function Navbar() {
 											원정대 관리
 										</Link>
 									</li>
-									{/*
-									if ( is_manager == true )
-									{
-										<li><a className="dropdown-item" href="/mkk/manage/">관리자 페이지</a></li>
-									}
-									*/}
+									{me?.roles.some(
+										(role) => role === "manager"
+									) ? (
+										<li>
+											<a
+												className="dropdown-item"
+												href={`${MKK}/manage/`}>
+												관리자 페이지
+											</a>
+										</li>
+									) : null}
 									<li>
 										<hr className="dropdown-divider" />
 									</li>

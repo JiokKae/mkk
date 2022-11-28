@@ -5,6 +5,7 @@ export const ME = gql`
 		me {
 			name
 			id
+			roles
 			profiles {
 				character {
 					name

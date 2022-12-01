@@ -14,7 +14,7 @@ export default function Home() {
 
 	return (
 		<Container>
-			{loading ? null : data.me ? <MyCharacters /> : null}
+			{loading ? null : data?.me ? <MyCharacters /> : null}
 			<Votings />
 		</Container>
 	);

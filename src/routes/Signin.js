@@ -77,7 +77,7 @@ function Signin() {
 					value="로그인"
 				/>
 			</form>
-			<hr />
+			<hr style={{ width: "100%" }} />
 			<div className="text-center">
 				<StyledLink to="/signup/">
 					<SignupText className="color-mkk">계정 만들기</SignupText>

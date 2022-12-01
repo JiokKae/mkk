@@ -21,7 +21,7 @@ const Container = styled.div`
 export default function SignLayout() {
 	return (
 		<Background>
-			<Container>
+			<Container className="d-flex flex-column align-items-center">
 				<Outlet />
 			</Container>
 		</Background>

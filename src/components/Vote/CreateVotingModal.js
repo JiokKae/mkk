@@ -221,7 +221,7 @@ export default function CreateVotingModal({ className }) {
 									input: {
 										title,
 										deadline,
-										usingVotingItems,
+										votingItems: usingVotingItems,
 									},
 								},
 							});

@@ -218,7 +218,11 @@ export default function CreateVotingModal({ className }) {
 							setShow(false);
 							createVoting({
 								variables: {
-									input: { title, deadline, votingItems },
+									input: {
+										title,
+										deadline,
+										usingVotingItems,
+									},
 								},
 							});
 						}}>

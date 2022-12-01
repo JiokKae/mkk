@@ -23,6 +23,15 @@ export const ME = gql`
 	}
 `;
 
+export const CHECK_CHARACTER = gql`
+	query Character($name: String!) {
+		character(name: $name) {
+			itemLevel
+			class
+		}
+	}
+`;
+
 export const SINGIN = gql`
 	mutation Signin($input: SigninInput!) {
 		signin(input: $input) {
@@ -38,6 +47,16 @@ export const SINGIN = gql`
 export const SIGNOUT = gql`
 	mutation Signout {
 		signout
+	}
+`;
+
+export const SIGNUP = gql`
+	mutation Signup($input: SignupInput!) {
+		signup(input: $input) {
+			success
+			errorProperty
+			errorMessage
+		}
 	}
 `;
 

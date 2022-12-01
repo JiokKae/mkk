@@ -26,14 +26,9 @@ const VotingTab = styled.div`
 export default function Votings() {
 	const VOTING_TABS = [{ name: "진행중인 투표" }, { name: "종료된 투표" }];
 	const [votingTabIndex, setVotingTabIndex] = useState(0);
-	const [votings, setVotings] = useState([]);
 
 	const { data } = useQuery(ME);
-	useQuery(VOTINGS, {
-		onCompleted: ({ votings }) => {
-			setVotings(votings);
-		},
-	});
+	const { data: { votings } = {} } = useQuery(VOTINGS);
 
 	return (
 		<>
@@ -56,7 +51,7 @@ export default function Votings() {
 			) : null}
 			{votingTabIndex === 0 ? (
 				<div>
-					{votings.map((voting) => (
+					{votings?.map((voting) => (
 						<Voting key={voting.id} voting={voting} />
 					))}
 				</div>

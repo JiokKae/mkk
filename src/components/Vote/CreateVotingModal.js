@@ -194,6 +194,27 @@ export default function CreateVotingModal({ className }) {
 					<button
 						className="btn btn-mkk"
 						onClick={() => {
+							if (!title) {
+								alert("투표 제목을 입력하세요");
+								return;
+							}
+							var usingVotingItems = votingItems.filter(
+								(votingItem) => votingItem.name !== ""
+							);
+							if (!usingVotingItems.length) {
+								alert("항목을 입력하세요");
+								return;
+							}
+							if (
+								new Set(
+									usingVotingItems.map(
+										(votingItem) => votingItem.name
+									)
+								).size !== usingVotingItems.length
+							) {
+								alert("중복된 항목이 있습니다");
+								return;
+							}
 							setShow(false);
 							createVoting({
 								variables: {

@@ -6,6 +6,9 @@ function FloatingInput({
 	autoFocus,
 	name,
 	required,
+	maxLength,
+	pattern,
+	autoComplete,
 	help,
 	value,
 	onChange,
@@ -18,8 +21,11 @@ function FloatingInput({
 				id={`${id}Input`}
 				className="mkk-form form-control"
 				placeholder={name}
-				required={required ? true : false}
-				autoFocus={autoFocus ? true : false}
+				maxLength={maxLength}
+				pattern={pattern}
+				autoComplete={autoComplete}
+				required={required}
+				autoFocus={autoFocus}
 				value={value}
 				onChange={onChange}
 			/>

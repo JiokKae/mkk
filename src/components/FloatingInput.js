@@ -6,6 +6,7 @@ function FloatingInput({
 	autoFocus,
 	name,
 	required,
+	help,
 	value,
 	onChange,
 }) {
@@ -23,6 +24,11 @@ function FloatingInput({
 				onChange={onChange}
 			/>
 			<label htmlFor={`${id}Input`}>{name}</label>
+			{help ? (
+				<small id={`${name}HelpBlock`} className="form-text">
+					{help}
+				</small>
+			) : null}
 		</div>
 	);
 }

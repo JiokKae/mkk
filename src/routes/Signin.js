@@ -3,8 +3,8 @@ import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import FloatingInput from "../components/FloatingInput";
+import MkkLogo from "../components/MkkLogo";
 import { ME, QUERIES_AFFECTED_BY_SIGN, SINGIN } from "../constants/querys";
-import { MKK } from "../constants/urls";
 
 const SigninButton = styled.input`
 	width: 100%;
@@ -18,10 +18,6 @@ const StyledLink = styled(Link)`
 const SignupText = styled.p`
 	font-size: 1.25rem;
 	letter-spacing: -0.125rem;
-`;
-const MkkLogoImg = styled.img`
-	align-content: center;
-	margin: 2rem;
 `;
 const ErrorMessage = styled.div`
 	color: red;
@@ -54,9 +50,7 @@ function Signin() {
 	});
 	return (
 		<>
-			<Link to="/">
-				<MkkLogoImg src={`${MKK}/img/mkk_logo_s.png`} />
-			</Link>
+			<MkkLogo />
 			<form className="form-sign" onSubmit={onSubmit}>
 				<FloatingInput
 					id="id"

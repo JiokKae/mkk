@@ -24,10 +24,7 @@ const Nav = styled.nav`
 `;
 
 function Navbar() {
-	const {
-		data: { me = null },
-		loading,
-	} = useQuery(ME);
+	const { data: { me } = {}, loading } = useQuery(ME);
 	const [signout] = useMutation(SIGNOUT, {
 		refetchQueries: QUERIES_AFFECTED_BY_SIGN,
 	});

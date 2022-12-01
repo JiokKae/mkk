@@ -1,13 +1,15 @@
+import { useId } from "react";
+
 function FloatingInput({
 	type = "text",
 	className,
 	autoFocus,
-	id,
 	name,
 	required,
 	value,
 	onChange,
 }) {
+	const id = useId();
 	return (
 		<div className={`form-floating ${className}`}>
 			<input

@@ -10,6 +10,7 @@ export const CLASS_LOCALE = {
 	battlemaster: { kr: "배틀마스터" },
 	battle_master: { kr: "배틀마스터" },
 	striker: { kr: "스트라이커" },
+	battle_master_male: { kr: "스트라이커" },
 	infighter: { kr: "인파이터" },
 	lancemaster: { kr: "창술사" },
 	gunslinger: { kr: "건슬링어" },

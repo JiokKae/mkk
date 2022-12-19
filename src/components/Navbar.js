@@ -8,7 +8,7 @@ import styled from "styled-components";
 function UserIcon() {
 	return (
 		<img
-			src={`${MKK}/img/user.png`}
+			src={`${process.env.REACT_APP_IMAGE_URL}/user.png`}
 			alt="유저"
 			style={{
 				height: "1.5rem",
@@ -39,7 +39,7 @@ function Navbar() {
 			<div className="container-lg">
 				<Link to="/" className="navbar-brand">
 					<img
-						src={`${MKK}/img/mkk_logo_s.png`}
+						src={`${process.env.REACT_APP_IMAGE_URL}/mkk_logo_s.png`}
 						className="d-inline-block align-text-top"
 						style={{ height: "1.5rem", margin: ".625rem" }}
 					/>
@@ -97,7 +97,7 @@ function Navbar() {
 										{me.name}
 									</span>
 									<img
-										src={`${MKK}/img/^.png`}
+										src={`${process.env.REACT_APP_IMAGE_URL}/^.png`}
 										alt="caret"
 										style={{
 											transform: "rotate(180deg)",

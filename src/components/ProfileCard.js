@@ -79,7 +79,7 @@ export default function ProfileCard({ character, allow = true, closeButton }) {
 				<Row className="gx-2 mb-2 flex-nowrap align-items-center">
 					<Col xs="auto">
 						<img
-							src={`${MKK}/img/guild.png`}
+							src={`${process.env.REACT_APP_IMAGE_URL}/guild.png`}
 							style={{
 								maxHeight: "1.5rem",
 							}}

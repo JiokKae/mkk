@@ -24,7 +24,10 @@ export default function LoawaSearchForm() {
 				onChange={(e) => setCharacterName(e.target.value)}
 			/>
 			<button type="submit" className="btn">
-				<Img src={`${MKK}/img/search.png`} alt="검색" />
+				<Img
+					src={`${process.env.REACT_APP_IMAGE_URL}/search.png`}
+					alt="검색"
+				/>
 			</button>
 		</Form>
 	);

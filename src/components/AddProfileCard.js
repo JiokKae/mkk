@@ -21,7 +21,7 @@ export default function AddProfileCard({ onClick }) {
 			<Card
 				className="d-flex justify-content-center align-items-center"
 				onClick={onClick}>
-				<img src={`${MKK}/img/plus.png`} />
+				<img src={`${process.env.REACT_APP_IMAGE_URL}/plus.png`} />
 			</Card>
 		</div>
 	);

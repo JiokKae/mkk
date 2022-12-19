@@ -10,7 +10,9 @@ const MkkLogoImg = styled.img`
 export default function MkkLogo() {
 	return (
 		<Link to="/">
-			<MkkLogoImg src={`${MKK}/img/mkk_logo_s.png`} />
+			<MkkLogoImg
+				src={`${process.env.REACT_APP_IMAGE_URL}/mkk_logo_s.png`}
+			/>
 		</Link>
 	);
 }
